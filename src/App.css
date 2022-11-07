@@ -206,6 +206,10 @@
   gap: 50px;
 }
 
+.cart-notify {
+  color: var(--gray);
+}
+
 .cart-item {
   display: flex;
 }

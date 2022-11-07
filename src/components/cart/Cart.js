@@ -15,11 +15,15 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      {data?.cart?.map((item) => (
-        <div key={item.id}>
-          <CartItem cartItem={item} />
-        </div>
-      ))}
+      {data.cart.length > 0 ? (
+        data?.cart?.map((item) => (
+          <div key={item.id}>
+            <CartItem cartItem={item} />
+          </div>
+        ))
+      ) : (
+        <span className="cart-notify">Your cart is empty.</span>
+      )}
     </div>
   );
 };
